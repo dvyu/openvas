@@ -2,7 +2,7 @@ version: "2"
 services:
   openvas:
     container_name: openvas
-    image: dvin/openvas:1.0.1
+    image: debian
     entrypoint:
           - sh
           - -c
