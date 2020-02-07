@@ -1,0 +1,9 @@
+version: "2"
+services:
+  openvas:
+    container_name: openvas
+    image: dvin/openvas:1.0.1
+    entrypoint:
+          - sh
+          - -c
+          - "while [ 1 ]; do echo . ; sleep 5; done"
