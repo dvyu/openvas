@@ -1,0 +1,9 @@
+version: "2"
+services:
+  debian:
+    container_name: debian
+    image: debian
+    entrypoint:
+          - sh
+          - -c
+          - "while [ 1 ]; do echo . ; sleep 5; done"
