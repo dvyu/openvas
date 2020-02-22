@@ -3,6 +3,8 @@ services:
   gvmd:
     container_name: gvmd
     image: dvin/gvmd:1.0.1
+    volumes:
+          - /var/run/postgresql:/var/run/postgresql
     entrypoint:
           - sh
           - -c
