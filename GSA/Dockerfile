@@ -1,7 +1,7 @@
 FROM debian
 MAINTAINER Yuri Dvin <dvyu@yandex.ru>
 
-RUN apt-get update && apt-get install -y telnet procps net-tools htop iputils-ping vim curl zip git pkg-config libssh-gcrypt-dev libmicrohttpd-dev libglib2.0-dev libxml2-dev apt-transport-https cmake gnupg2 gettext python-polib
+RUN apt-get update && apt-get install -y telnet procps net-tools htop iputils-ping vim curl zip git pkg-config libssh-gcrypt-dev libmicrohttpd-dev libglib2.0-dev libxml2-dev apt-transport-https libhiredis0.14 cmake gnupg2 gettext python-polib
 
 RUN curl --silent --show-error https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
