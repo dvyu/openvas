@@ -10,6 +10,7 @@ RUN echo "deb https://deb.nodesource.com/node_8.x stretch main" | tee /etc/apt/s
 
 RUN apt-get update && apt-get install -y nodejs yarn
 
+RUN cd / && git clone https://github.com/greenbone/gvm-libs.git && cd gvm-libs && git checkout tags/v11.0.0 && cmake . && make && make install
 RUN cd / && git clone https://github.com/greenbone/gsa.git && cd gsa && git checkout tags/v9.0.0 && cmake . && make && make install
 
 ADD docker-entrypoint.sh /
