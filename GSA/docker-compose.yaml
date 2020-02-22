@@ -4,6 +4,11 @@ services:
     container_name: gsa
     image: dvin/gsa:1.0.1
     entrypoint:
-          - sh
-          - -c
-          - "while [ 1 ]; do echo . ; sleep 5; done"
+          - gsad
+          - -f 
+          - --http-only
+          - --listen=0.0.0.0
+          - -v
+#          - sh
+#          - -c
+#          - "while [ 1 ]; do echo . ; sleep 5; done"
