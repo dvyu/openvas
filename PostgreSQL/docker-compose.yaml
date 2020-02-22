@@ -1,0 +1,7 @@
+version: "2"
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    volumes:
+          - /var/run/postgresql:/var/run/postgresql
