@@ -3,6 +3,8 @@ services:
   gsa:
     container_name: gsa
     image: dvin/gsa:1.0.1
+    ports:
+      - "8160:80"
     entrypoint:
           - gsad
           - -f 
