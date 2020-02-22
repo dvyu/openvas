@@ -1,7 +1,7 @@
 version: "2"
 services:
-  gsa:
-    container_name: gsa
+  gvmd:
+    container_name: gvmd
     image: dvin/gvmd:1.0.1
     entrypoint:
           - sh
