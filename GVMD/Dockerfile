@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y telnet procps net-tools htop iputils-pi
 RUN cd / && git clone https://github.com/greenbone/gvm-libs.git && cd gvm-libs && git checkout gvm-libs-11.0 && cmake . && make && make install
 RUN cd / && git clone https://github.com/greenbone/gvmd.git && cd gvmd && git checkout gvmd-9.0 && cmake . && make && make install
 
+RUN ln -s /usr/local/lib/libgvm_base.so.11 /usr/lib/libgvm_base.so.11 && ln -s /usr/local/lib/libgvm_util.so.11 /usr/lib/libgvm_util.so.11 && ln -s /usr/local/lib/libgvm_gmp.so.11 /usr/lib/libgvm_gmp.so.11 && ln -s /usr/local/lib/libgvm_osp.so.11 /usr/lib/libgvm_osp.so.11
+
 ADD docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
