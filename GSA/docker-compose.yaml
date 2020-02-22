@@ -2,7 +2,7 @@ version: "2"
 services:
   gsa:
     container_name: gsa
-    image: dvin\gsa:1.0.1
+    image: dvin/gsa:1.0.1
     entrypoint:
           - sh
           - -c
